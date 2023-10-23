@@ -1,3 +1,0 @@
-# FlashCards
-
-Time to learn
