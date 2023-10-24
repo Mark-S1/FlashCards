@@ -1,5 +1,5 @@
 export default {
-	base: 'docs/',
+	base: '/FlashCards/docs/',
 	build: {
 		outDir: './docs'
 	}
