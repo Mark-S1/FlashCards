@@ -34,12 +34,14 @@ export class CardElem extends LitElement {
 	:host {
 		max-width: 480px;
 		max-height: 480px;
+		min-width: 250px;
+		min-height: 250px;
 		margin: 0 auto;
 		width: calc(40vw);
 		height: calc(40vw);
 		border: 0px solid black;
 		font-size: 2.4rem;
-		border-radius: 20px;
+		border-radius: 3vw;
 		box-shadow: 6px 6px 15px gray;
 	}
 	
@@ -52,6 +54,12 @@ export class CardElem extends LitElement {
 		padding: 2rem;
 		box-sizing: border-box;
 		
+	}
+	
+	@media screen and (max-width: 625px) {
+		:host {
+			font-size: 1.8rem;
+		}
 	}
 	`
 }

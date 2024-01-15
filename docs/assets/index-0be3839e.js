@@ -118,12 +118,14 @@
 	:host {
 		max-width: 480px;
 		max-height: 480px;
+		min-width: 250px;
+		min-height: 250px;
 		margin: 0 auto;
 		width: calc(40vw);
 		height: calc(40vw);
 		border: 0px solid black;
 		font-size: 2.4rem;
-		border-radius: 20px;
+		border-radius: 3vw;
 		box-shadow: 6px 6px 15px gray;
 	}
 	
@@ -136,5 +138,11 @@
 		padding: 2rem;
 		box-sizing: border-box;
 		
+	}
+	
+	@media screen and (max-width: 625px) {
+		:host {
+			font-size: 1.8rem;
+		}
 	}
 	`;ut([W()],R.prototype,"cardText",2);R=ut([pt("card-elem")],R);(()=>{const r=document.getElementById("card"),t=document.getElementById("clicker");let e=0,i=[{front:"front0",back:"back0"},{front:"front1",back:"back1"}];t&&r&&t.addEventListener("click",()=>{e=++e%i.length,r.clicker(i[e])})})();
