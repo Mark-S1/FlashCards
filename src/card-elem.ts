@@ -3,33 +3,55 @@ import { customElement, property } from 'lit/decorators.js'
 
 @customElement('card-elem')
 export class CardElem extends LitElement {
+	isFront:boolean = true;
+	front:string = "front text";
+	back:string = "back text";
+	
 	@property()
-	cardText = 'Some text'
+	cardText:string = this.front;
 	
 	render() {
 		return html`
-		<div @click=${this._onClick}>
+		<div id="card-area" @click=${this._onClick}>
 			${this.cardText}
 		</div>
 	`
 	}
 	
+	clicker(data: {front:string, back:string}) {
+		this.isFront = true;
+		this.front = data.front;
+		this.back = data.back;
+		this.cardText = this.front;
+	}
+	
 	private _onClick() {
-		console.log("click");
+		this.cardText = this.isFront ? this.back : this.front;
+		this.isFront = !this.isFront;
 	}
 	
 	static styles = css`
 	:host {
-		max-width: 400px;
-		max-height: 400px;
+		max-width: 480px;
+		max-height: 480px;
 		margin: 0 auto;
-		padding: 2rem;
-		width: calc(33vw);
-		height: calc(33vw);
-		border: 1px solid black;
+		width: calc(40vw);
+		height: calc(40vw);
+		border: 0px solid black;
+		font-size: 2.4rem;
+		border-radius: 20px;
+		box-shadow: 6px 6px 15px gray;
+	}
+	
+	#card-area {
+		width: 100%;
+		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 2rem;
+		box-sizing: border-box;
+		
 	}
 	`
 }

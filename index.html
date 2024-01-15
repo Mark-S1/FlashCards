@@ -1,22 +1,26 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FlashCards</title>
+		<link rel="stylesheet" href="./src/index.css" />
+		<link rel="icon" type="image/png" rel="noopener" target="_blank" href="./src/assets/favicon.png">
+		<script type="module" src="/src/my-element.ts"></script>
+		<script type="module" src="/src/card-elem.ts"></script>
+		
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>FlashCards</title>
-	<link rel="stylesheet" href="./src/index.css" />
-	<link rel="icon" type="image/png" rel="noopener" target="_blank" href="./src/assets/favicon.png">
-	<script type="module" src="/src/my-element.ts"></script>
-	<script type="module" src="/src/card-elem.ts"></script>
-</head>
+	<body>
+		<!--<my-element>
+			<h1>Vite + Lit</h1>
+		</my-element>-->
+		<card-elem id="card"></card-elem>
+		<button id="clicker">CLICK ME</button>
+	</body>
 
-<body>
-	<!--<my-element>
-		<h1>Vite + Lit</h1>
-	</my-element>-->
-	<card-elem></card-elem>
-</body>
-
+	<footer>
+		<script type="module" src="/src/flashcards.ts"></script>
+	</footer>
 </html>
